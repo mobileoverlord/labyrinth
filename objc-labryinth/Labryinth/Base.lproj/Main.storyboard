@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="172.16.1.2:4000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-Y6-fGA">
+                                <rect key="frame" x="188" y="60" width="225" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="H9J-qF-KM8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftr-Xy-ttj">
+                                <rect key="frame" x="188" y="98" width="59" height="30"/>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="connect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYf-QU-TDm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CL7-OW-p6q">
+                                <rect key="frame" x="188" y="144" width="78" height="30"/>
+                                <state key="normal" title="Start Game"/>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgX-aj-iEN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3Y-7T-WiZ">
+                                <rect key="frame" x="336" y="144" width="77" height="30"/>
+                                <state key="normal" title="Stop Game"/>
+                                <connections>
+                                    <action selector="stopGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G5M-Ca-etS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uMn-Y6-fGA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OAf-zC-BLL"/>
+                            <constraint firstItem="uMn-Y6-fGA" firstAttribute="leading" secondItem="Ftr-Xy-ttj" secondAttribute="leading" id="Ogz-z3-W4W"/>
+                            <constraint firstItem="n3Y-7T-WiZ" firstAttribute="baseline" secondItem="CL7-OW-p6q" secondAttribute="baseline" id="SGE-GH-hq3"/>
+                            <constraint firstItem="uMn-Y6-fGA" firstAttribute="trailing" secondItem="n3Y-7T-WiZ" secondAttribute="trailing" id="U90-Ln-ooa"/>
+                            <constraint firstItem="Ftr-Xy-ttj" firstAttribute="top" secondItem="uMn-Y6-fGA" secondAttribute="bottom" constant="8" symbolic="YES" id="VYv-gu-LuJ"/>
+                            <constraint firstItem="uMn-Y6-fGA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="bbu-8X-Iz9"/>
+                            <constraint firstItem="Ftr-Xy-ttj" firstAttribute="leading" secondItem="CL7-OW-p6q" secondAttribute="leading" id="thP-Lx-JFL"/>
+                            <constraint firstItem="CL7-OW-p6q" firstAttribute="top" secondItem="Ftr-Xy-ttj" secondAttribute="bottom" constant="16" id="uDi-VE-1eC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="urlField" destination="uMn-Y6-fGA" id="ewo-WO-YcB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="387"/>
+        </scene>
+    </scenes>
+</document>
